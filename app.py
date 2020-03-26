@@ -19,9 +19,9 @@ def loadData(fileName, columnName):
     data[columnName].fillna(0, inplace=True)
     return data
 
-allData = loadData("time_series_19_confirmed_global.csv", "CumConfirmed") \
-    .merge(loadData("time_series_19_deaths_global.csv", "CumDeaths")) \
-    .merge(loadData("time_series_19_recovered_global.csv", "CumRecovered"))
+allData = loadData("time_series_covid19_confirmed_global.csv", "CumConfirmed") \
+    .merge(loadData("time_series_covid19_deaths_global.csv", "CumDeaths")) \
+    .merge(loadData("time_series_covid19_recovered_global.csv", "CumRecovered"))
 
 countries = allData['Country/Region'].unique()
 countries.sort()
