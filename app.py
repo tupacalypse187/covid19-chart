@@ -19,9 +19,9 @@ def loadData(fileName, columnName):
     data[columnName].fillna(0, inplace=True)
     return data
 
-allData = loadData("time_series_19-covid-Confirmed.csv", "CumConfirmed") \
-    .merge(loadData("time_series_19-covid-Deaths.csv", "CumDeaths")) \
-    .merge(loadData("time_series_19-covid-Recovered.csv", "CumRecovered"))
+allData = loadData("time_series_19_confirmed_global.csv", "CumConfirmed") \
+    .merge(loadData("time_series_19_deaths_global.csv", "CumDeaths")) \
+    .merge(loadData("time_series_19_recovered_global.csv", "CumRecovered"))
 
 countries = allData['Country/Region'].unique()
 countries.sort()
@@ -34,6 +34,7 @@ app.layout = html.Div(
     style={ 'font-family':"Courier New, monospace" },
     children=[
         html.H1('Case History of the Coronavirus (COVID-19)'),
+        html.H4('https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_time_series'),
         html.Div(className="row", children=[
             html.Div(className="four columns", children=[
                 html.H5('Country'),
