@@ -131,7 +131,7 @@ def update_plot_new_metrics(country, state, metrics):
 )
 def update_plot_cum_metrics(country, state, metrics):
     data = nonreactive_data(country, state)
-    return barchart(data, metrics, prefix="Cum", yaxisTitle="Cumulated Cases")
+    return barchart(data, metrics, prefix="Cum", yaxisTitle="Total Cases")
 
 
 if __name__ == '__main__':
