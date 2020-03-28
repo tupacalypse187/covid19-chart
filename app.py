@@ -27,6 +27,7 @@ countries = allData['Country/Region'].unique()
 countries.sort()
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+app.title = 'COVID-19 Chart'
 
 server = app.server
 
