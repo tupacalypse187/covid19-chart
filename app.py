@@ -1,9 +1,9 @@
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
+import pandas as pd
 import plotly.graph_objects as go
 from dash.dependencies import Input, Output
-import pandas as pd
 
 baseURL = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/"
 external_stylesheets = ["https://codepen.io/chriddyp/pen/bWLwgP.css"]
